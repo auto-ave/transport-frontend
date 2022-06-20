@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+    color: #696969;
+}
+html {
+    scroll-behavior: smooth;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    color: black;
+}
+
+@keyframes rightImage {
+    0% {
+        transform: rotate(0deg);
+        right: 210px;
+    }
+    100% {
+        transform: rotate(15deg);
+        right: 130px;
+    }
+}
+
+@keyframes leftImage {
+    0% {
+        transform: rotate(0deg);
+        left: 210px;
+    }
+    100% {
+        transform: rotate(-15deg);
+        left: 130px;
+    }
+}
+
+.text-shadow {
+    text-shadow: 0 2px 4px rgba(0,0,0);
+}
+
+.svg-background-lines {
+    z-index: 0;
+    position: absolute;
+    top: -50px;
+    height: 300px;
+    width: 100%;
+    background-color: transparent;
+}
