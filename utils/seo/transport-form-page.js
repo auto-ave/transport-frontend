@@ -7,7 +7,7 @@ export const KEYWORDS = [
     "Vehicle Shipping Quote",
     "Transport vehicle to another state",
     "Car carrier transport"
-    
+
 ]
 
 
@@ -20,7 +20,7 @@ export const SEO_PAGES_TRANSPORT_FORM_PAGE = [
         keywords: 'Car transportation service, Vehicle transportation service, Car carrier transport, Vehicle carrier transport, Vehicle shipping quote, Transport vehicle to another state, Car carrier transport',
 
         pageHeading: "Vehicle Transport across the country",
-        
+
     },
     {
         path: "car-carrier-transport",
@@ -30,6 +30,7 @@ export const SEO_PAGES_TRANSPORT_FORM_PAGE = [
         keywords: 'car carrier transport, car transport, vehicle transport, vehicle transportation, vehicle transportation services, vehicle shipping quote, transport vehicle to another state, car carrier transport',
 
         pageHeading: "Transport Car across the country",
-        
+
     },
+    
 ]
