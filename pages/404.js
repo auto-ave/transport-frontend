@@ -4,10 +4,16 @@ import Link from "next/link";
 import towing from '@public/images/autoave-towing.svg';
 import Navbar from "@components/UI/LandingNavbar";
 import LandingFooter from "@components/UI/LandingFooter";
+import Head from "next/head";
 
 export default function PageNotFound() {
     return (
         <>
+            <Head>
+                <title>
+                    Page not found - Autoave Transport
+                </title>
+            </Head>
             <div>
                 <div className="flex flex-col justify-between min-h-screen">
                     <Navbar />

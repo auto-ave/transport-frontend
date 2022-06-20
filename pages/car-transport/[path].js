@@ -88,7 +88,7 @@ export default function CarTransportService(props) {
                 canonical={`${LOCALISATION_DATA[locale].domain}/car-transport/${path}`}
                 openGraph={{
                     url: `${LOCALISATION_DATA[locale].domain}/car-transport/${path}`,
-                    title: 'Car And Vehicle Transportation Service - Autoave',
+                    title: title,
                     description: description,
                     images: [
                         {

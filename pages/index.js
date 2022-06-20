@@ -78,12 +78,12 @@ export default function CarTransportServiceIndex() {
     return (
         <>
             <NextSeo
-                title="Car And Vehicle Transportation Service - Autoave"
+                title="Car Transportation Service - Autoave"
                 description="We at Autoave take pride in our services. We are a team of highly qualified and experienced car and vehicle movers. We are here to help you with your car and vehicle transportation needs."
                 canonical={`${LOCALISATION_DATA[locale].domain}`}
                 openGraph={{
                     url: `${LOCALISATION_DATA[locale].domain}`,
-                    title: 'Car And Vehicle Transportation Service - Autoave',
+                    title: 'Car Transportation Service - Autoave',
                     description: 'We at Autoave take pride in our services. We are a team of highly qualified and experienced car and vehicle movers. We are here to help you with your car and vehicle transportation needs.',
                     images: [
                         {
@@ -145,7 +145,7 @@ export default function CarTransportServiceIndex() {
                             <div className="py-12 px-4 lg:py-32 mx-auto text-center">
                                 <div className="mb-8">
                                     <h1 className="text-shadow text-3xl lg:text-5xl font-bold tracking-tighter mb-2 text-white">
-                                        Best Car Transport Services across the country
+                                        Car Transportation Service
                                     </h1>
                                     <h2 className="text-shadow font-normal text-lg lg:text-xl text-white">
                                         Just fill the form and we will reach you with lowest prices and best service!
