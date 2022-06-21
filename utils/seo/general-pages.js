@@ -19,6 +19,26 @@ export const SEO_PAGES_GENERAL = [
         pageHeading: "Best Vehicle Transportion Service",
 
     },
+    {
+        path: "transport-car-in-india",
+
+        title: "Transport Car anywhere in India - Autoave",
+        description: "We at Autoave take pride in our services. We are a team of highly qualified and experienced car and vehicle movers. We are here to help you with your car and vehicle transportation needs.",
+        keywords: 'Car transportation service, Vehicle transportation service, Car carrier transport, Vehicle carrier transport, Vehicle shipping quote, Transport vehicle to another state, Car carrier transport',
+
+        pageHeading: "Transport Car anywhere in India",
+
+    },
+    {
+        path: "get-a-quote",
+
+        title: "Car Transportation Quote - Autoave",
+        description: "We at Autoave take pride in our services. We are a team of highly qualified and experienced car and vehicle movers. We are here to help you with your car and vehicle transportation needs.",
+        keywords: 'Car transport quote, get car shifting quote, Vehicle transportation service, Car carrier transport, Vehicle carrier transport, Vehicle shipping quote, Transport vehicle to another state, Car carrier transport',
+
+        pageHeading: "Get a free quote for Car Transport",
+
+    },
     { 'path': 'car-transportation-in-agra', 'title': 'Car Transport in Agra - Autoave', 'description': 'Best car transportations in Agra, vehicle shifting, car carriers and shipping cost effective service providers in Agra. Get best rates, charges, quotes from top car transportation services providers.', 'keywords': 'car transport in Agra, car transport company in Agra, car packers and movers in Agra, car shifting services in Agra', 'pageHeading': 'Car Transportation in Agra' },
     { 'path': 'agra/car-transport', 'title': 'Car Transportation in Agra - Autoave', 'description': 'Best car transportations in Agra, vehicle shifting, car carriers and shipping cost effective service providers in Agra. Get best rates, charges, quotes from top car transportation services providers.', 'keywords': 'car transport in Agra, car transport company in Agra, car packers and movers in Agra, car shifting services in Agra', 'pageHeading': 'Car Transportation in Agra' },
     { 'path': 'car-transport-services/agra', 'title': 'Car Transport Services in Agra - Car Carriers in Agra', 'description': ' Best car transportations in Agra, vehicle shifting, car carriers and shipping cost effective service providers in Agra. Get best rates, charges, quotes from top car transportation services providers.', 'keywords': 'car transport in Agra, car transport company in Agra, car packers and movers in Agra, car shifting services in Agra', 'pageHeading': 'Car Transportation in Agra' },
