@@ -20,7 +20,7 @@ import background from '@public/images/car-transport/car-transport-background.jp
 import BgImage from "@components/Custom/BgImage";
 import BasicOverview from "@components/CarTransport/BasicOverview";
 import Features from "@components/CarTransport/Features";
-import GetTheApp from "@components/LandingPage/GetTheApp";
+// import GetTheApp from "@components/LandingPage/GetTheApp";
 import Content1 from "@components/CarTransport/Content1";
 import Content2 from "@components/CarTransport/Content2";
 
@@ -292,14 +292,14 @@ export default function CarTransportServiceIndex() {
                         </div>
                     </div>
 
-                    <div className="py-16">
+                    {/* <div className="py-16">
                         <div className="container max-w-7xl mx-auto">
                             <h2 className="mb-6 lg:mb-16 text-3xl lg:text-5xl font-bold tracking-tighter">
                                 Need a Carwash?
                             </h2>
                         </div>
                         <GetTheApp homepageRedirect={true} />
-                    </div>
+                    </div> */}
 
                     {/* <LandingContactUs /> */}
                 </div>

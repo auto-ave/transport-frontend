@@ -5,6 +5,7 @@ import Select from 'react-select'
 
 const city_options = [
     { value: "Bangalore", label: "Bangalore" },
+    { value: "Bengaluru", label: "Bengaluru" },
     { value: "Chennai", label: "Chennai" },
     { value: "Delhi", label: "Delhi" },
     { value: "Hyderabad", label: "Hyderabad" },
@@ -21,6 +22,20 @@ const city_options = [
     { value: "Lucknow", label: "Lucknow" },
     { value: "Mumbai", label: "Mumbai" },
     { value: "Noida", label: "Noida" },
+    { value: "Kanpur", label: "Kanpur" },
+    { value: "Patna", label: "Patna" },
+    { value: "Raipur", label: "Raipur" },
+    { value: "Rajkot", label: "Rajkot" },
+    { value: "Surat", label: "Surat" },
+    { value: "Vadodara", label: "Vadodara" },
+    { value: "Vijayawada", label: "Vijayawada" },
+    { value: "Visakhapatnam", label: "Visakhapatnam" },
+    { value: "Vishakhapatnam", label: "Vishakhapatnam" },
+    { value: "Amritsar", label: "Amritsar" },
+    { value: "Cuttack", label: "Cuttack" },
+    { value: "Dehradun", label: "Dehradun" },
+
+
 
 ]
 
