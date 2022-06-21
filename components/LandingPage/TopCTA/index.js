@@ -9,16 +9,10 @@ import AppScreen1 from '@public/images/autoave-app-1.webp'
 import AppScreen2 from '@public/images/autoave-app-2.webp'
 import AppScreen3 from '@public/images/autoave-app-3.webp'
 import { APPSTORE_URL, PLAYSTORE_URL } from '@utils/contants/general'
-import MixpanelTracking from 'service/mixpanel'
 import { DOWNLOAD_CLICK } from '@utils/contants/tracking_events'
 
 export default function TopCTA(props){
     const { deviceType } = props
-    const handleDownload = (type) => {
-        MixpanelTracking.getInstance().track(DOWNLOAD_CLICK, {
-            "Download Type": type
-        })
-    }
     return (
         <>
             <BgImage 
@@ -38,10 +32,10 @@ export default function TopCTA(props){
                         Choose from a variety of stores &amp; services and book according to your schedule. No more waiting in queues.
                     </p>
                     <div className='flex justify-center'>
-                        <a href={PLAYSTORE_URL} className='m-2' target="_blank" rel="noreferrer" onClick={() => handleDownload("Play Store - Page Top CTA")}>
+                        <a href={PLAYSTORE_URL} className='m-2' target="_blank" rel="noreferrer">
                             <Image src={PlayStoreBadge} alt="Play Store Badge" priority />
                         </a>
-                        <a href={APPSTORE_URL} className='m-2' target="_blank" rel="noreferrer" onClick={() => handleDownload("App Store - Page Top CTA")}>
+                        <a href={APPSTORE_URL} className='m-2' target="_blank" rel="noreferrer">
                             <Image src={AppStoreBadge} alt="App Store Badge" priority />
                         </a>
                     </div>

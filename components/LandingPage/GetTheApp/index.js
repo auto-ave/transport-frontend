@@ -4,20 +4,11 @@ import AppScreen1 from '@public/images/autoave-app-store-page-half.webp'
 import { APPSTORE_URL, PLAYSTORE_URL } from "@utils/contants/general"
 import PlayStoreBadge from '@public/images/play-store-badge.png'
 import AppStoreBadge from '@public/images/app-store-badge.png'
-import MixpanelTracking from "service/mixpanel"
-import { DOWNLOAD_CLICK } from '@utils/contants/tracking_events'
 import LOCALISATION_DATA, { COUNTRY_TO_LOCALE } from "@utils/localisation"
 import useLocale from "@utils/useLocale";
-import Link from "next/link"
 
 export default function GetTheApp({ homepageRedirect }) {
     const { locale } = useLocale()
-
-    const handleDownload = (type) => {
-        MixpanelTracking.getInstance().track(DOWNLOAD_CLICK, {
-            "Download Type": type
-        })
-    }
     return (
         <>
             <div className="outer-container">
@@ -48,10 +39,10 @@ export default function GetTheApp({ homepageRedirect }) {
                                     <>
                                         <h5 className="text-white text-xl bold mb-2">Get the App</h5>
                                         <div className="flex">
-                                            <a href={PLAYSTORE_URL} className="mr-2" target="_blank" rel="noreferrer" onClick={() => handleDownload("Play Store - Page Bottom CTA")}>
+                                            <a href={PLAYSTORE_URL} className="mr-2" target="_blank" rel="noreferrer">
                                                 <Image src={PlayStoreBadge} alt="Play Store Badge" priority />
                                             </a>
-                                            <a href={APPSTORE_URL} className="ml-2" target="_blank" rel="noreferrer" onClick={() => handleDownload("App Store - Page Bottom CTA")}>
+                                            <a href={APPSTORE_URL} className="ml-2" target="_blank" rel="noreferrer">
                                                 <Image src={AppStoreBadge} alt="App Store Badge" priority />
                                             </a>
                                         </div>

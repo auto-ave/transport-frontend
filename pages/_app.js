@@ -1,11 +1,8 @@
 import { DefaultSeo } from 'next-seo'
 
 import '/styles/global.css'
-import { useEffect } from 'react';
 
 import { useRouter } from 'next/dist/client/router';
-import MixpanelTracking from 'service/mixpanel';
-import { PAGE_VIEW } from '@utils/contants/tracking_events';
 import LOCALISATION_DATA, { COUNTRY_TO_LOCALE } from "@utils/localisation"
 import useLocale from "@utils/useLocale";
 import Script from 'next/script';
@@ -19,26 +16,6 @@ function MyApp({ Component, pageProps }) {
     const router = useRouter();
     
     const { locale } = useLocale()
-
-    useEffect(() => {
-        const handleRouteChange = (url, data) => {
-            if(!data.shallow){
-                console.log('inside handleRouteChange', data);
-                var mixpanel = MixpanelTracking.getInstance();
-                mixpanel.track(PAGE_VIEW)
-            }
-        };
-        router.events.on('routeChangeComplete', handleRouteChange);
-        return () => {
-            router.events.off('routeChangeComplete', handleRouteChange);
-        };
-    }, [router.events])
-
-    useEffect(() => {
-        console.log('calling mixpanel tracking');
-        var mixpanel = MixpanelTracking.getInstance();
-        mixpanel.track(PAGE_VIEW)
-    }, [])
 
     return (
         <>
