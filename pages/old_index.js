@@ -1,4 +1,3 @@
-import { SEO_PAGES_TRANSPORT_FORM_PAGE } from "@utils/seo/transport-form-page"
 import CarTransportForm from "@components/Forms/CarTransportForm";
 import LandingContactUs from "@components/LandingPage/ContactUs";
 import LandingFooter from "@components/UI/LandingFooter";
@@ -21,7 +20,7 @@ import background from '@public/images/car-transport/car-transport-background.jp
 import BgImage from "@components/Custom/BgImage";
 import BasicOverview from "@components/CarTransport/BasicOverview";
 import Features from "@components/CarTransport/Features";
-import GetTheApp from "@components/LandingPage/GetTheApp";
+// import GetTheApp from "@components/LandingPage/GetTheApp";
 import Content1 from "@components/CarTransport/Content1";
 import Content2 from "@components/CarTransport/Content2";
 
@@ -67,12 +66,8 @@ export const WHY_US = [
     },
 ]
 
-export default function CarTransportService(props) {
-    const path = props.path
-    const title = props.title
-    const pageHeading = props.pageHeading
-    const description = props.description
-    const keywords = props.keywords
+export default function CarTransportServiceIndex() {
+    const router = useRouter()
 
     const { locale } = useLocale()
 
@@ -83,13 +78,15 @@ export default function CarTransportService(props) {
     return (
         <>
             <NextSeo
-                title={title}
-                description={description}
-                canonical={`${LOCALISATION_DATA[locale].domain}/car-transport/${path}`}
+                title="Car Transportation Service - Autoave"
+                noindex={true}
+                nofollow={true}
+                description="We at Autoave take pride in our services. We are a team of highly qualified and experienced car and vehicle movers. We are here to help you with your car and vehicle transportation needs."
+                canonical={`${LOCALISATION_DATA[locale].domain}`}
                 openGraph={{
-                    url: `${LOCALISATION_DATA[locale].domain}/car-transport/${path}`,
-                    title: title,
-                    description: description,
+                    url: `${LOCALISATION_DATA[locale].domain}`,
+                    title: 'Car Transportation Service - Autoave',
+                    description: 'We at Autoave take pride in our services. We are a team of highly qualified and experienced car and vehicle movers. We are here to help you with your car and vehicle transportation needs.',
                     images: [
                         {
                             url: `${LOCALISATION_DATA[locale].domain}/autoave-banner.jpg`,
@@ -103,7 +100,7 @@ export default function CarTransportService(props) {
                 }}
                 additionalMetaTags={[{
                     name: 'keywords',
-                    content: keywords
+                    content: 'Car transport, car transportation, vehicle transport, car shifting'
                 }]}
             />
 
@@ -123,7 +120,7 @@ export default function CarTransportService(props) {
                 id="https://transport.autoave.in/"
                 name="Autoave Transportation Service"
                 description="Best Car Transportation Service in India"
-                url={`https://transport.autoave.in/car-transport/${path}`}
+                url="https://transport.autoave.in"
                 telephone="+91-7847099990"
                 address={{
                     streetAddress: '',
@@ -150,7 +147,7 @@ export default function CarTransportService(props) {
                             <div className="py-12 px-4 lg:py-32 mx-auto text-center">
                                 <div className="mb-8">
                                     <h1 className="text-shadow text-3xl lg:text-5xl font-bold tracking-tighter mb-2 text-white">
-                                        {pageHeading}
+                                        Car Transportation Service
                                     </h1>
                                     <h2 className="text-shadow font-normal text-lg lg:text-xl text-white">
                                         Just fill the form and we will reach you with lowest prices and best service!
@@ -297,14 +294,14 @@ export default function CarTransportService(props) {
                         </div>
                     </div>
 
-                    <div className="py-16">
+                    {/* <div className="py-16">
                         <div className="container max-w-7xl mx-auto">
                             <h2 className="mb-6 lg:mb-16 text-3xl lg:text-5xl font-bold tracking-tighter">
                                 Need a Carwash?
                             </h2>
                         </div>
                         <GetTheApp homepageRedirect={true} />
-                    </div>
+                    </div> */}
 
                     {/* <LandingContactUs /> */}
                 </div>
@@ -313,29 +310,4 @@ export default function CarTransportService(props) {
 
         </>
     )
-}
-
-export async function getStaticProps({ params }) {
-    console.log('params: ', params)
-
-    const page = SEO_PAGES_TRANSPORT_FORM_PAGE.filter(item => item.path === params.path)[0]
-
-    return {
-        props: page,
-    }
-}
-
-export async function getStaticPaths(context) {
-    console.log('context: ', context)
-    // Call an external API endpoint to get posts
-    const pages = SEO_PAGES_TRANSPORT_FORM_PAGE
-
-    // Get the paths we want to pre-render based on posts
-    const paths = pages.map((page) => ({
-        params: { path: page.path }
-    }))
-
-    // We'll pre-render only these paths at build time.
-    // { fallback: false } means other routes should 404.
-    return { paths, fallback: false }
 }

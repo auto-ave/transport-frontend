@@ -17,6 +17,8 @@ export default function PartnerTermsAndConditions() {
         <>
             <NextSeo
                 title="Terms and Conditions - Service Partner"
+                noindex={true}
+                nofollow={true}
                 description="Service Partner's Terms and Conditions at Autoave - Simplifying the way you take care of your car."
                 canonical={`${LOCALISATION_DATA[locale].domain}/service-partner/terms`}
                 openGraph={{

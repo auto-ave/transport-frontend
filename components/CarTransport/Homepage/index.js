@@ -1,15 +1,12 @@
-import { SEO_PAGES_TRANSPORT_FORM_PAGE } from "@utils/seo/transport-form-page"
 import CarTransportForm from "@components/Forms/CarTransportForm";
-import LandingContactUs from "@components/LandingPage/ContactUs";
 import LandingFooter from "@components/UI/LandingFooter";
 import Navbar from "@components/UI/LandingNavbar";
-import { FACEBOOK_APP_ID, FACEBOOK_URL, INSTAGRAM_URL, LINKEDIN_URL, SITE_URL } from "@utils/contants/general";
+import { FACEBOOK_URL, INSTAGRAM_URL, LINKEDIN_URL, SITE_URL } from "@utils/contants/general";
 import LOCALISATION_DATA, { COUNTRY_TO_LOCALE } from "@utils/localisation"
 import useLocale from "@utils/useLocale";
 
 import { NextSeo } from "next-seo";
 import { SocialProfileJsonLd, LocalBusinessJsonLd, BrandJsonLd } from 'next-seo';
-import { useRouter } from "next/router";
 import Image from 'next/image'
 import image2 from '@public/images/car-transport/price-tag.png'
 import image1 from '@public/images/car-transport/delivery-notes.png'
@@ -24,6 +21,8 @@ import Features from "@components/CarTransport/Features";
 // import GetTheApp from "@components/LandingPage/GetTheApp";
 import Content1 from "@components/CarTransport/Content1";
 import Content2 from "@components/CarTransport/Content2";
+import OtherCities from "@components/OtherCities";
+import FAQ from "../FAQ";
 
 const HOW_IT_WORKS = [
     {
@@ -70,8 +69,8 @@ export const WHY_US = [
 const DEFAULT_PATH = "";
 const DEFAULT_TITLE = "Car Transportation Service | Autoave";
 const DEFAULT_DESCRIPTION = "We at Autoave take pride in our services. We are a team of highly qualified and experienced car and vehicle movers. We are here to help you with your car and vehicle transportation needs.";
-const DEFAULT_PAGE_HEADING = "Car Transportation Service across the country";
-const DEFAULT_KEYWORDS = "Car transportation service, Vehicle transportation service, Car carrier transport, Vehicle carrier transport, Vehicle shipping quote, Transport vehicle to another state, Car carrier transport";
+const DEFAULT_PAGE_HEADING = "Car Transportation Service";
+const DEFAULT_KEYWORDS = "Car transportation service, car transport, car shifting service, Vehicle transportation service, Car carrier transport, Vehicle carrier transport, Vehicle shipping quote, Transport vehicle to another state, Car carrier transport";
 
 export default function CarTransportHomepage(props) {
     const path = props.path || DEFAULT_PATH;
@@ -79,6 +78,8 @@ export default function CarTransportHomepage(props) {
     const pageHeading = props.pageHeading || DEFAULT_PAGE_HEADING;
     const description = props.description || DEFAULT_DESCRIPTION;
     const keywords = props.keywords || DEFAULT_KEYWORDS;
+
+    console.log('path on page: ', path)
 
     const { locale } = useLocale()
 
@@ -91,9 +92,9 @@ export default function CarTransportHomepage(props) {
             <NextSeo
                 title={title}
                 description={description}
-                canonical={`${LOCALISATION_DATA[locale].domain}/car-transport/${path}`}
+                canonical={`${LOCALISATION_DATA[locale].domain}/${path}`}
                 openGraph={{
-                    url: `${LOCALISATION_DATA[locale].domain}/car-transport/${path}`,
+                    url: `${LOCALISATION_DATA[locale].domain}/${path}`,
                     title: title,
                     description: description,
                     images: [
@@ -129,7 +130,7 @@ export default function CarTransportHomepage(props) {
                 id="https://transport.autoave.in/"
                 name="Autoave Transportation Service"
                 description="Best Car Transportation Service in India"
-                url={`https://transport.autoave.in/car-transport/${path}`}
+                url={`https://transport.autoave.in/${path}`}
                 telephone="+91-7847099990"
                 address={{
                     streetAddress: '',
@@ -170,27 +171,6 @@ export default function CarTransportHomepage(props) {
                     </BgImage>
 
                     <BasicOverview />
-                    
-                    {/* <div className="block lg:flex">
-                        <div className="flex-1 py-0 md:py-32 px-4">
-                            <div className="border py-8 px-4 md:p-12 max-w-xl mx-auto">
-                                <h1 className="text-3xl lg:text-4xl font-bold tracking-tighter mb-2">
-                                    Best Car Transport Services across the country
-                                </h1>
-                                <h2 className="font-normal">
-                                    Just fill the form and we will reach you with lowest prices and best service!
-                                </h2>
-                            </div>
-                        </div>
-                        <div className="flex-1">
-                            <div className="p-12 max-w-xl mx-auto">
-                                <h6 className="text-xl mb-5">
-                                    Fill this form to get a quotation
-                                </h6>
-                                <CarTransportForm />
-                            </div>
-                        </div>
-                    </div> */}
 
                     <div className="relative py-5 lg:py-12">
                         <div className="svg-background-lines">
@@ -301,19 +281,17 @@ export default function CarTransportHomepage(props) {
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    {/* <div className="py-16">
-                        <div className="container max-w-7xl mx-auto">
-                            <h2 className="mb-6 lg:mb-16 text-3xl lg:text-5xl font-bold tracking-tighter">
-                                Need a Carwash?
-                            </h2>
+                        <div className="container max-w-7xl px-5 py-6 lg:py-12">
+                            <FAQ />
                         </div>
-                        <GetTheApp homepageRedirect={true} />
-                    </div> */}
-
-                    {/* <LandingContactUs /> */}
+                        <div className="container max-w-7xl px-5 py-6 lg:py-12">
+                            <OtherCities />
+                        </div>
+                    </div>
+                   
                 </div>
+                
                 <LandingFooter />
             </div>
 

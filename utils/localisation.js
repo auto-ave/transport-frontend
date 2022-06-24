@@ -7,7 +7,7 @@ const LOCALISATION_DATA = {
         email: "care@autoave.in",
         domain: "https://transport.autoave.in",
         country: "India",
-        service_location_text: "Proudly serving in Bangalore",
+        service_location_text: "Proudly serving from Bangalore",
         city_image: scene,
     },
     "en-ie": {

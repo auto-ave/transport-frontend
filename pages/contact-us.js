@@ -18,12 +18,12 @@ export default function ContactUs(){
     return (
         <>
             <NextSeo
-                title="Contact Us | Autoave - Car care made simple"
+                title="Contact Us | Autoave - Car Transportation"
                 description="Contact Us at Autoave - Simplifying the way you take care of your car."
                 canonical={`${LOCALISATION_DATA[locale].domain}/contact-us`}
                 openGraph={{
                     url: `${LOCALISATION_DATA[locale].domain}/contact-us`,
-                    title: 'Contact Us | Autoave - Car care made simple',
+                    title: 'Contact Us | Autoave - Car Transportation',
                     description: 'Contact Us at Autoave - Simplifying the way you take care of your car.',
                     images: [
                         {
@@ -38,7 +38,7 @@ export default function ContactUs(){
                 }}
                 additionalMetaTags={[{
                     name: 'keywords',
-                    content: 'Autoave, autoave contact us, Car Wash, Book Car Wash, Car Care, Car Wash in Banglore'
+                    content: 'car transportation, car transport, car transportation service'
                 }]}
                 facebook={{
                     appId: FACEBOOK_APP_ID,

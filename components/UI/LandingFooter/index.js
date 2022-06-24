@@ -26,9 +26,6 @@ export default function LandingFooter() {
                                 <a href={ROUTES.CONTACT_US} className="footer-item">
                                     Contact Us
                                 </a>
-                                <a href={ROUTES.CAR_TRANSPORTATION_SERVICE} className="footer-item">
-                                    Car Transportation Service
-                                </a>
                                 <a href={ROUTES.COOKIES_POLICY} className="footer-item hidden">
                                     Cookie Policy
                                 </a>

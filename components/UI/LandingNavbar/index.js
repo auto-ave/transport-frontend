@@ -39,11 +39,6 @@ export default function Navbar({ light }) {
                                 Contact Us
                             </a>
                         </Link>
-                        <Link href={ROUTES.CAR_TRANSPORTATION_SERVICE}>
-                            <a className="navbar-item text-primary hidden md:block">
-                                Car Transport Service
-                            </a>
-                        </Link>
                     </div>
                 </div>
             </div>

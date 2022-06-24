@@ -1,3 +1,22 @@
+cities = [
+    "Ahmedabad",
+    "Bangalore",
+    "Bengaluru",
+    "Chandigarh",
+    "Chennai",
+    "Delhi",
+    "Hyderabad",
+    "Indore",
+    "Kanpur",
+    "Lucknow",
+    "Mumbai",
+    "Noida",
+    "Patna",
+    "Pune",
+    "Kolkata",
+    "Gurgaon",
+]
+
 module.exports = {
     siteUrl: process.env.SITE_URL || 'https://transport.autoave.in',
     generateRobotsTxt: true,
@@ -12,13 +31,16 @@ module.exports = {
                 alternateRefs: config.alternateRefs
             }
         }
-        if(path.includes('bangalore') || path.includes('delhi')){
-            return {
-                loc: path,
-                changefreq: config.changefreq,
-                priority: 0.9,
-                lastmod: config.autoLastmod ? new Date().toISOString() : undefined,
-                alternateRefs: config.alternateRefs
+        for(city of cities){
+            city = city.toLowerCase();
+            if(path.includes(city)){
+                return {
+                    loc: path,
+                    changefreq: config.changefreq,
+                    priority: 0.9,
+                    lastmod: config.autoLastmod ? new Date().toISOString() : undefined,
+                    alternateRefs: config.alternateRefs
+                }
             }
         }
         if(path.includes('consumer') || path.includes('service-partner')){
