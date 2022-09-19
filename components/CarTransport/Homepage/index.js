@@ -78,6 +78,7 @@ export default function CarTransportHomepage(props) {
     const pageHeading = props.pageHeading || DEFAULT_PAGE_HEADING;
     const description = props.description || DEFAULT_DESCRIPTION;
     const keywords = props.keywords || DEFAULT_KEYWORDS;
+    const city = props.city || "Bangalore";
 
     console.log('path on page: ', path)
 
@@ -108,10 +109,20 @@ export default function CarTransportHomepage(props) {
                     ],
                     site_name: 'Autoave',
                 }}
-                additionalMetaTags={[{
-                    name: 'keywords',
-                    content: keywords
-                }]}
+                additionalMetaTags={[
+                    {
+                        name: 'keywords',
+                        content: keywords
+                    }, 
+                    {
+                        name: 'robots',
+                        content: 'index, follow'
+                    },
+                    {
+                        name: 'city',
+                        content: city
+                    }
+                ]}
             />
 
             <SocialProfileJsonLd
@@ -256,16 +267,16 @@ export default function CarTransportHomepage(props) {
                             <div className="flex flex-wrap justify-center md:justify-between items-center mb-16">
                                 {WHY_US.map((item, index) => {
                                     return (
-                                        <div 
-                                            className={`md:flex-1 p-3 max-w-xs`} 
-                                            key={item.key} 
+                                        <div
+                                            className={`md:flex-1 p-3 max-w-xs`}
+                                            key={item.key}
                                         >
                                             <div className="mb-4 relative pt-56">
                                                 <Image src={item.image} layout="fill" objectFit="contain" alt={item.title} priority />
                                             </div>
                                             <div>
                                                 <h5 className="text-2xl mb-2">
-                                                    {item.title} 
+                                                    {item.title}
                                                 </h5>
                                                 <p className="">
                                                     {item.description}
@@ -289,9 +300,9 @@ export default function CarTransportHomepage(props) {
                             <OtherCities />
                         </div>
                     </div>
-                   
+
                 </div>
-                
+
                 <LandingFooter />
             </div>
 
